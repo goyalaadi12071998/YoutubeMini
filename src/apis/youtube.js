@@ -1,5 +1,4 @@
 import axios from 'axios';
-import config from '../config/keys';
 
 export async function searchVideos(term) {
     const response = await axios.get('https://www.googleapis.com/youtube/v3/search',{
@@ -8,7 +7,7 @@ export async function searchVideos(term) {
             type: 'video',
             q: term,
             maxResults: 50,
-            key: config.ACCESSKEY
+            key: process.env.API_KEY //'AIzaSyADdpixw0lyqVWimR-UjEBkBfbh2-3Fkxs'
         }
     });
     return response.data.items;
