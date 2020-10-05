@@ -7,7 +7,7 @@ export async function searchVideos(term) {
             type: 'video',
             q: term,
             maxResults: 50,
-            key: process.env.API_KEY //'AIzaSyADdpixw0lyqVWimR-UjEBkBfbh2-3Fkxs'
+            key: 'AIzaSyADdpixw0lyqVWimR-UjEBkBfbh2-3Fkxs'
         }
     });
     return response.data.items;
